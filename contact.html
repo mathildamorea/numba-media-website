@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numba Media | Contact</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <header>
+        <h1>Numba Media</h1>
+        <p>Content That Connects</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+
+        <section aria-labelledby="contact-heading">
+
+            <h2 id="contact-heading">Contact Numba Media</h2>
+
+            <p>
+                Contact Numba Media to discuss your photography,
+                videography or media production requirements.
+            </p>
+
+            <h3>Contact Information</h3>
+
+            <p>
+                Email: info@numbamedia.com
+            </p>
+
+            <p>
+                Location: Port Moresby, Papua New Guinea
+            </p>
+
+        </section>
+        
+        <section aria-labelledby="quote-heading">
+            
+            <h2 id="quote-heading">Request a Quote</h2>
+            
+            <p>
+                Complete the form below to tell us about your media
+                production requirements.
+            </p>
+
+            <form action="#" method="post">
+                
+                <p>
+                    <label for="full-name">Full Name:</label><br>
+                    <input type="text" 
+                            id="full-name" 
+                            name="full-name"
+                            required>
+                </p>
+            
+                <p>
+                    <label for="organisation">Organisation:</label><br>
+                    <input type="text"
+                            id="organisation" 
+                            name="organisation">
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" 
+                            id="email"
+                            name="email" required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel"
+                            id="phone"
+                            name="phone"
+                            required>
+                </p>
+
+                <p>
+                    <label for="service">Service Required:</label><br>
+
+                    <select id="service" name="service" required>
+                        <option value="">-- Select a Service --</option>
+                        <option value="video-production">Video Production</option>
+                        <option value="photography">Photography</option>
+                        <option value="drone-production">Drone and Aerial Production</option>
+                        <option value="live-production">Live Production</option>
+                        <option value="post-production">Post-Production</option>
+                    </select>
+                </p>
+        
+                <p>
+                    <label for="project-date">Preferred Project Date:</label><br>
+                    <input type="date"
+                            id="project-date"
+                            name="project-date">
+                </p>
+
+                <fieldset>
+                    <legend>Preferred Contact Method</legend>
+
+                    <input type="radio"
+                            id="contact-email"
+                            name="contact-method"
+                            value="email"
+                            required>
+                    <label for="contact-email">Email</label>
+
+                    <input type="radio"
+                            id="contact-phone"
+                            name="contact-method"
+                            value="phone">
+                    <label for="contact-phone">Phone</label>
+                </fieldset>  
+
+                <fieldset>
+                    <legend>Required Deliverables</legend>
+
+                    <input type="checkbox"
+                            id="photos"
+                            name="deliverables"
+                            value="photos">
+                    <label for="photos">Edited Photos</label><br>
+
+                    <input type="checkbox"
+                            id="video"
+                            name="deliverables"
+                            value="video">
+                    <label for="video">Edited Video</label><br>
+
+                    <input type="checkbox"
+                            id="drone"
+                            name="deliverables"
+                            value="drone">
+                    <label for="drone">Drone Footage</label><br>
+
+                    <input type="checkbox"
+                            id="live-stream"
+                            name="deliverables"
+                            value="live-stream">
+                    <label for="live-stream">Live Streaming</label>
+                </fieldset>
+                
+                <p>
+                    <label for="project-description">Project Description:</label><br>
+
+                    <textarea id="project-description"
+                            name="project-description"
+                            rows="6"
+                            cols="50"
+                            required></textarea>
+                </p>
+                
+                <p>
+                    <input type="checkbox"
+                            id="consent"
+                            name="consent"
+                            required>
+
+                    <label for="consent">
+                        I confirm that the information provided is correct.
+                    </label>
+                </p>
+
+                <p>
+                    <button type="submit">Submit Quote Request</button>
+                </p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Numba Media. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
