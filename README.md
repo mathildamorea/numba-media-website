@@ -55,6 +55,11 @@ The following pages completed validation with no errors or warnings:
 
 Validation screenshots are included in the `validation` folder.
 
+## Project Links
+
+- GitHub Repository: https://github.com/mathildamorea/numba-media-website
+- Published Website: https://mathildamorea.github.io/numba-media-website/
+
 ## Author
 
 Mathilda Morea
