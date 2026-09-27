@@ -31,6 +31,11 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     margin: 0;
     font-family: var(--font-primary);
@@ -91,6 +96,37 @@ body {
 
 main {
     padding: 20px;
+}
+
+/* ========================================
+   Services
+   CSS Grid Layout
+   ======================================== */
+
+.services-section {
+    margin-bottom: var(--spacing-xlarge);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-large);
+    margin-top: var(--spacing-large);
+}
+
+.service-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-large);
+}
+
+.service-card h3 {
+    margin-top: 0;
+}
+
+.service-card p {
+    margin-bottom: 0;
 }
 
 footer {
@@ -166,4 +202,71 @@ td {
 
 th {
     background-color: #eeeeee;
+}
+
+/* ========================================
+   Homepage Hero
+   ======================================== */
+
+.hero {
+    margin-bottom: var(--spacing-xlarge);
+}
+
+.hero-content {
+    max-width: 750px;
+    margin-bottom: var(--spacing-large);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: var(--spacing-medium);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+}
+
+.hero-image {
+    margin: 0;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+.hero-image figcaption {
+    margin-top: var(--spacing-small);
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.button,
+button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid var(--color-accent);
+    border-radius: var(--border-radius);
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-text-light);
 }
