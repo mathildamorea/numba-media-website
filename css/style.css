@@ -39,39 +39,54 @@ body {
     background-color: var(--color-background);
 }
 
-header {
-    background-color: #111111;
-    color: #ffffff;
-    padding: 20px;
+/* ========================================
+   Header and Navigation
+   Flexbox Layout
+   ======================================== */
+
+.site-header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: var(--spacing-medium) var(--spacing-large);
 }
 
-header h1 {
+.header-content {
+    max-width: var(--content-width);
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-large);
+}
+
+.brand h1 {
     margin: 0;
+    font-size: 2rem;
 }
 
-header p {
-    margin-bottom: 0;
+.brand p {
+    margin: 0.25rem 0 0;
 }
 
-nav {
-    background-color: #333333;
-    padding: 10px 20px;
-}
+.main-navigation ul {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-large);
 
-nav ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav li {
-    display: inline;
-    margin-right: 20px;
+.main-navigation a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: bold;
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
+.main-navigation a[aria-current="page"] {
+    color: var(--color-accent);
 }
 
 main {
