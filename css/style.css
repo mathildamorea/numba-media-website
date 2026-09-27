@@ -1,6 +1,11 @@
 /* ========================================
    NUMBA MEDIA
-   Assessment 3 - Responsive Website
+   Assessment 3 - Responsive HTML5 + CSS3
+   ======================================== */
+
+
+/* ========================================
+   1. GLOBAL DESIGN VARIABLES
    ======================================== */
 
 :root {
@@ -21,19 +26,20 @@
     --spacing-xlarge: 3rem;
 
     --border-radius: 6px;
-
     --content-width: 1200px;
 }
 
-/* Apply consistent box sizing */
+
+/* ========================================
+   2. GLOBAL STYLES
+   ======================================== */
 
 * {
     box-sizing: border-box;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -44,9 +50,25 @@ body {
     background-color: var(--color-background);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+a {
+    color: inherit;
+}
+
+
 /* ========================================
-   Header and Navigation
-   Flexbox Layout
+   3. HEADER AND NAVIGATION
+   FLEXBOX
    ======================================== */
 
 .site-header {
@@ -56,12 +78,11 @@ body {
 }
 
 .header-content {
+    width: 100%;
     max-width: var(--content-width);
     margin: 0 auto;
 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: var(--spacing-large);
 }
 
@@ -76,8 +97,6 @@ body {
 
 .main-navigation ul {
     display: flex;
-    align-items: center;
-    gap: var(--spacing-large);
 
     list-style: none;
     margin: 0;
@@ -90,122 +109,37 @@ body {
     font-weight: bold;
 }
 
+.main-navigation a:hover {
+    color: var(--color-accent);
+}
+
 .main-navigation a[aria-current="page"] {
     color: var(--color-accent);
 }
 
-main {
-    padding: 20px;
-}
 
 /* ========================================
-   Services
-   CSS Grid Layout
+   4. MAIN PAGE CONTENT
    ======================================== */
 
-.services-section {
+main {
+    width: min(100% - 2rem, var(--content-width));
+    margin: 0 auto;
+    padding: var(--spacing-large) 0;
+}
+
+section {
     margin-bottom: var(--spacing-xlarge);
 }
 
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-large);
-    margin-top: var(--spacing-large);
-}
-
-.service-card {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-    padding: var(--spacing-large);
-}
-
-.service-card h3 {
+section > h2 {
     margin-top: 0;
 }
 
-.service-card p {
-    margin-bottom: 0;
-}
-
-footer {
-    background-color: #111111;
-    color: #ffffff;
-    padding: 15px 20px;
-    margin-top: 20px;
-}
-
-/* Basic form styling */
-
-form {
-    max-width: 600px;
-}
-
-label,
-legend {
-    font-weight: bold;
-}
-
-input,
-select,
-textarea {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    padding: 8px;
-    margin-top: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-    width: 100%;
-}
-
-fieldset {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 15px;
-}
-
-textarea {
-    box-sizing: border-box;
-}
-
-button {
-    font-size: 16px;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-/* Basic table styling */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-caption {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-th,
-td {
-    border: 1px solid #cccccc;
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: #eeeeee;
-}
 
 /* ========================================
-   Homepage Hero
+   5. HOMEPAGE HERO
+   RESPONSIVE MEDIA
    ======================================== */
 
 .hero {
@@ -218,7 +152,6 @@ th {
 }
 
 .hero h2 {
-    font-size: 2rem;
     margin-top: 0;
     margin-bottom: var(--spacing-medium);
 }
@@ -245,22 +178,58 @@ th {
     color: #666666;
 }
 
+
 /* ========================================
-   Buttons
+   6. SERVICES
+   CSS GRID
+   ======================================== */
+
+.services-section {
+    margin-bottom: var(--spacing-xlarge);
+}
+
+.service-grid {
+    display: grid;
+    gap: var(--spacing-large);
+    margin-top: var(--spacing-large);
+}
+
+.service-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-large);
+}
+
+.service-card h3 {
+    margin-top: 0;
+}
+
+.service-card p {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   7. BUTTONS
    ======================================== */
 
 .button,
 button {
     display: inline-block;
     padding: 0.75rem 1.25rem;
+
     border: 2px solid var(--color-accent);
     border-radius: var(--border-radius);
+
     background-color: var(--color-accent);
     color: var(--color-primary);
+
     font-family: var(--font-primary);
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
+
     cursor: pointer;
 }
 
@@ -269,4 +238,260 @@ button:hover {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
     color: var(--color-text-light);
+}
+
+
+/* ========================================
+   8. FORM STYLING
+   ======================================== */
+
+form {
+    width: 100%;
+    max-width: 700px;
+}
+
+form p {
+    margin-bottom: var(--spacing-medium);
+}
+
+label,
+legend {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 0.25rem;
+    padding: 0.75rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+fieldset {
+    width: 100%;
+    margin: var(--spacing-medium) 0;
+    padding: var(--spacing-medium);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+}
+
+
+/* ========================================
+   9. TABLE STYLING
+   ======================================== */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 700px;
+
+    border-collapse: collapse;
+
+    margin-top: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+}
+
+caption {
+    margin-bottom: var(--spacing-small);
+
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+th,
+td {
+    border: 1px solid var(--color-border);
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: var(--color-surface);
+}
+
+
+/* ========================================
+   10. FOOTER
+   ======================================== */
+
+footer {
+    margin-top: var(--spacing-large);
+    padding: var(--spacing-large);
+
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+footer p {
+    width: min(100%, var(--content-width));
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   11. ACCESSIBILITY
+   VISIBLE FOCUS STATES
+   ======================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   12. MOBILE
+   DEFAULT: BELOW 600px
+   ======================================== */
+
+.header-content {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.brand {
+    width: 100%;
+    text-align: left;
+}
+
+.main-navigation {
+    width: 100%;
+}
+
+.main-navigation ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-small);
+    margin-top: var(--spacing-medium);
+}
+
+.main-navigation a {
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.service-grid {
+    grid-template-columns: 1fr;
+}
+
+.hero h2 {
+    font-size: 1.75rem;
+}
+
+
+/* ========================================
+   13. TABLET
+   600px TO 1023px
+   ======================================== */
+
+@media (min-width: 600px) {
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand {
+        width: 100%;
+        text-align: left;
+    }
+
+    .main-navigation {
+        width: 100%;
+    }
+
+    .main-navigation ul {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-large);
+        margin-top: var(--spacing-medium);
+    }
+
+    .main-navigation a {
+        display: inline-block;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* ========================================
+   14. DESKTOP
+   1024px AND WIDER
+   ======================================== */
+
+@media (min-width: 1024px) {
+
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .brand {
+        width: auto;
+        text-align: left;
+    }
+
+    .main-navigation {
+        width: auto;
+    }
+
+    .main-navigation ul {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-large);
+        margin-top: 0;
+    }
+
+    .main-navigation a {
+        display: inline-block;
+        padding: 0.5rem 0;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 2.25rem;
+    }
 }
