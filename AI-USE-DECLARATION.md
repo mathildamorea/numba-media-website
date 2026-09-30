@@ -29,3 +29,22 @@ AI-generated suggestions were reviewed and adapted for the Numba Media website p
 ## AI Tool Used
 
 ChatGPT - OpenAI
+
+## Assessment 3 AI Use
+
+For Assessment 3, ChatGPT was used as a learning and development support tool.
+
+AI assistance was used to:
+
+- explain CSS custom properties and reusable CSS structure;
+- provide guidance on Flexbox implementation;
+- provide guidance on CSS Grid implementation;
+- explain mobile-first responsive design;
+- assist with media query structure;
+- explain responsive image and table techniques;
+- assist with accessible focus-state implementation;
+- troubleshoot CSS and responsive layout issues;
+- provide guidance on responsive and browser testing; and
+- assist with project documentation.
+
+All suggested code was reviewed, implemented and tested using Visual Studio Code and web browsers.
