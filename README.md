@@ -69,3 +69,43 @@ Mathilda Morea
 IS0229 - Web Design  
 Assessment 2 - HTML5 Website  
 2026
+
+## Assessment 3 - Responsive Website Development
+
+The Assessment 2 HTML5 website was extended for Assessment 3 using CSS3 responsive design techniques.
+
+### A3 Features
+
+- organised external CSS;
+- CSS custom properties for colours, typography and spacing;
+- Flexbox header and navigation;
+- CSS Grid service card layouts;
+- responsive images;
+- responsive forms;
+- responsive Service Guide table;
+- mobile, tablet and desktop media queries;
+- reusable button and card styles;
+- visible keyboard focus states; and
+- responsive browser testing.
+
+### Responsive Breakpoints
+
+The website uses a mobile-first responsive approach.
+
+- Mobile: below 600 px
+- Tablet: 600 px to 1023 px
+- Desktop: 1024 px and wider
+
+### Layout Behaviour
+
+Service cards adapt according to viewport size:
+
+- Mobile: 1 column
+- Tablet: 2 columns
+- Desktop: 3 columns
+
+### Testing Evidence
+
+Responsive and browser testing evidence is available in the `testing` folder.
+
+Additional testing information is documented in `TESTING.md`.

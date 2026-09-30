@@ -1,61 +1,257 @@
+/* ========================================
+   NUMBA MEDIA
+   Assessment 3 - Responsive HTML5 + CSS3
+   ======================================== */
+
+
+/* ========================================
+   1. GLOBAL DESIGN VARIABLES
+   ======================================== */
+
+:root {
+    --color-primary: #111111;
+    --color-secondary: #333333;
+    --color-background: #ffffff;
+    --color-surface: #f5f5f5;
+    --color-text: #222222;
+    --color-text-light: #ffffff;
+    --color-border: #cccccc;
+    --color-accent: #d4a017;
+
+    --font-primary: Arial, Helvetica, sans-serif;
+
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --spacing-xlarge: 3rem;
+
+    --border-radius: 6px;
+    --content-width: 1200px;
+}
+
+
+/* ========================================
+   2. GLOBAL STYLES
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
+    font-family: var(--font-primary);
     line-height: 1.6;
-    color: #222222;
-    background-color: #ffffff;
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
-header {
-    background-color: #111111;
-    color: #ffffff;
-    padding: 20px;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-header h1 {
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* ========================================
+   3. HEADER AND NAVIGATION
+   FLEXBOX
+   ======================================== */
+
+.site-header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: var(--spacing-medium) var(--spacing-large);
+}
+
+.header-content {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+
+    display: flex;
+    gap: var(--spacing-large);
+}
+
+.brand h1 {
     margin: 0;
+    font-size: 2rem;
 }
 
-header p {
-    margin-bottom: 0;
+.brand p {
+    margin: 0.25rem 0 0;
 }
 
-nav {
-    background-color: #333333;
-    padding: 10px 20px;
-}
+.main-navigation ul {
+    display: flex;
 
-nav ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav li {
-    display: inline;
-    margin-right: 20px;
+.main-navigation a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: bold;
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
+.main-navigation a:hover {
+    color: var(--color-accent);
 }
+
+.main-navigation a[aria-current="page"] {
+    color: var(--color-accent);
+}
+
+
+/* ========================================
+   4. MAIN PAGE CONTENT
+   ======================================== */
 
 main {
-    padding: 20px;
+    width: min(100% - 2rem, var(--content-width));
+    margin: 0 auto;
+    padding: var(--spacing-large) 0;
 }
 
-footer {
-    background-color: #111111;
-    color: #ffffff;
-    padding: 15px 20px;
-    margin-top: 20px;
+section {
+    margin-bottom: var(--spacing-xlarge);
 }
 
-/* Basic form styling */
+section > h2 {
+    margin-top: 0;
+}
+
+
+/* ========================================
+   5. HOMEPAGE HERO
+   RESPONSIVE MEDIA
+   ======================================== */
+
+.hero {
+    margin-bottom: var(--spacing-xlarge);
+}
+
+.hero-content {
+    max-width: 750px;
+    margin-bottom: var(--spacing-large);
+}
+
+.hero h2 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-medium);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+}
+
+.hero-image {
+    margin: 0;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+.hero-image figcaption {
+    margin-top: var(--spacing-small);
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+
+/* ========================================
+   6. SERVICES
+   CSS GRID
+   ======================================== */
+
+.services-section {
+    margin-bottom: var(--spacing-xlarge);
+}
+
+.service-grid {
+    display: grid;
+    gap: var(--spacing-large);
+    margin-top: var(--spacing-large);
+}
+
+.service-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-large);
+}
+
+.service-card h3 {
+    margin-top: 0;
+}
+
+.service-card p {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   7. BUTTONS
+   ======================================== */
+
+.button,
+button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+
+    border: 2px solid var(--color-accent);
+    border-radius: var(--border-radius);
+
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+
+/* ========================================
+   8. FORM STYLING
+   ======================================== */
 
 form {
-    max-width: 600px;
+    width: 100%;
+    max-width: 700px;
+}
+
+form p {
+    margin-bottom: var(--spacing-medium);
 }
 
 label,
@@ -66,56 +262,236 @@ legend {
 input,
 select,
 textarea {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    padding: 8px;
-    margin-top: 5px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="date"],
 select,
 textarea {
     width: 100%;
-}
+    max-width: 100%;
 
-fieldset {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 15px;
+    margin-top: 0.25rem;
+    padding: 0.75rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 textarea {
-    box-sizing: border-box;
+    min-height: 150px;
+    resize: vertical;
 }
 
-button {
-    font-size: 16px;
-    padding: 10px 15px;
-    cursor: pointer;
+fieldset {
+    width: 100%;
+    margin: var(--spacing-medium) 0;
+    padding: var(--spacing-medium);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
 }
 
-/* Basic table styling */
+
+/* ========================================
+   9. TABLE STYLING
+   ======================================== */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
 
 table {
     width: 100%;
+    min-width: 700px;
+
     border-collapse: collapse;
-    margin-top: 20px;
+
+    margin-top: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
 }
 
 caption {
+    margin-bottom: var(--spacing-small);
+
     font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 1.1rem;
 }
 
 th,
 td {
-    border: 1px solid #cccccc;
-    padding: 10px;
+    border: 1px solid var(--color-border);
+    padding: 0.75rem;
     text-align: left;
 }
 
 th {
-    background-color: #eeeeee;
+    background-color: var(--color-surface);
+}
+
+
+/* ========================================
+   10. FOOTER
+   ======================================== */
+
+footer {
+    margin-top: var(--spacing-large);
+    padding: var(--spacing-large);
+
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+footer p {
+    width: min(100%, var(--content-width));
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   11. ACCESSIBILITY
+   VISIBLE FOCUS STATES
+   ======================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   12. MOBILE
+   DEFAULT: BELOW 600px
+   ======================================== */
+
+.header-content {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.brand {
+    width: 100%;
+    text-align: left;
+}
+
+.main-navigation {
+    width: 100%;
+}
+
+.main-navigation ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-small);
+    margin-top: var(--spacing-medium);
+}
+
+.main-navigation a {
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.service-grid {
+    grid-template-columns: 1fr;
+}
+
+.hero h2 {
+    font-size: 1.75rem;
+}
+
+
+/* ========================================
+   13. TABLET
+   600px TO 1023px
+   ======================================== */
+
+@media (min-width: 600px) {
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand {
+        width: 100%;
+        text-align: left;
+    }
+
+    .main-navigation {
+        width: 100%;
+    }
+
+    .main-navigation ul {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-large);
+        margin-top: var(--spacing-medium);
+    }
+
+    .main-navigation a {
+        display: inline-block;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* ========================================
+   14. DESKTOP
+   1024px AND WIDER
+   ======================================== */
+
+@media (min-width: 1024px) {
+
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .brand {
+        width: auto;
+        text-align: left;
+    }
+
+    .main-navigation {
+        width: auto;
+    }
+
+    .main-navigation ul {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-large);
+        margin-top: 0;
+    }
+
+    .main-navigation a {
+        display: inline-block;
+        padding: 0.5rem 0;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 2.25rem;
+    }
 }
