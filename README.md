@@ -109,3 +109,78 @@ Service cards adapt according to viewport size:
 Responsive and browser testing evidence is available in the `testing` folder.
 
 Additional testing information is documented in `TESTING.md`.
+
+---
+
+# Assessment 4 - Interactive Website Development
+
+## Project Overview
+
+Assessment 4 extends the existing Numba Media responsive website by introducing JavaScript functionality and improved user interaction.
+
+The website provides information about Numba Media's production services and allows visitors to explore estimated service costs and prepare quote requests.
+
+## Technologies Used
+
+- HTML5 - Semantic structure and forms
+- CSS3 - Styling and responsive layouts
+- Flexbox - Header and navigation
+- CSS Grid - Service card layouts
+- JavaScript - Calculations, validation and DOM interaction
+- Visual Studio Code - Development environment
+- Git and GitHub - Version control
+- GitHub Pages - Website publication
+
+## JavaScript Features
+
+### Service Quote Estimator
+
+Visitors can select a production service and enter the required number of hours.
+
+JavaScript calculates an illustrative estimated cost in Papua New Guinea Kina.
+
+The estimator validates the selected service and number of hours before displaying a result.
+
+### Contact Form Validation and Preview
+
+The Contact page includes an interactive quote request form.
+
+JavaScript checks required fields, displays validation feedback, highlights invalid inputs and generates a preview of the entered information.
+
+Visitors can edit their details before reviewing the request again.
+
+The form is a demonstration and does not transmit information to Numba Media.
+
+## Responsive Design
+
+The website uses a mobile-first responsive layout:
+
+- Mobile: below 600px
+- Tablet: 600px to 1023px
+- Desktop: 1024px and wider
+
+The navigation, service cards, images and forms adapt to different screen sizes.
+
+## Accessibility
+
+Accessibility features include:
+
+- Semantic HTML5 elements
+- Form labels
+- Alternative text for images
+- Visible keyboard focus states
+- Validation feedback
+- ARIA live regions
+- Responsive layouts
+
+## Testing
+
+Functional and responsive testing evidence is available in the `testing/assessment-4/` folder.
+
+Testing procedures and results are documented in `TESTING.md`.
+
+## Project Limitations
+
+The quote estimator uses illustrative rates and does not represent an official Numba Media quotation.
+
+The Contact form validates and previews user information but does not send or store quote requests.

@@ -48,3 +48,25 @@ AI assistance was used to:
 - assist with project documentation.
 
 All suggested code was reviewed, implemented and tested using Visual Studio Code and web browsers.
+
+---
+
+## Assessment 4 - AI Use Declaration
+
+ChatGPT was used as a learning and development support tool during Assessment 4.
+
+AI assistance included:
+
+- Explaining JavaScript variables, functions and event listeners.
+- Providing guidance on DOM manipulation.
+- Assisting with the Service Quote Estimator.
+- Providing guidance on JavaScript calculations and input validation.
+- Assisting with the Contact Form Preview.
+- Troubleshooting form submission and validation issues.
+- Explaining accessible error messages and field highlighting.
+- Providing guidance on functional and responsive testing.
+- Assisting with project documentation.
+
+The suggested code was reviewed, implemented and tested using Visual Studio Code and web browsers.
+
+The final website functionality and testing evidence were reviewed during development.
