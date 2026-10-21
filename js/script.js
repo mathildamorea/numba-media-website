@@ -89,6 +89,67 @@ if (
     editRequestButton
 ) {
 
+    // Display validation messages beside invalid fields.
+    quoteForm.addEventListener("invalid", function (event) {
+
+        const field = event.target;
+
+        event.preventDefault();
+
+        // Remove any previous error message for this field.
+        const existingMessage =
+            field.parentElement.querySelector(".field-error");
+
+        if (existingMessage) {
+            existingMessage.remove();
+        }
+
+        const errorMessage = document.createElement("span");
+        errorMessage.className = "field-error";
+
+        if (field.validity.valueMissing) {
+            errorMessage.textContent =
+                "Please complete this required field.";
+        } else if (field.validity.typeMismatch) {
+            errorMessage.textContent =
+                "Please enter a valid email address.";
+        } else {
+            errorMessage.textContent =
+                "Please check the information entered.";
+        }
+
+        field.insertAdjacentElement("afterend", errorMessage);
+        field.setAttribute("aria-invalid", "true");
+
+        formFeedback.textContent =
+            "Please correct the highlighted field before continuing.";
+
+        quotePreview.hidden = true;
+
+    }, true);
+
+    // Clear a field's error when its value becomes valid.
+    quoteForm.addEventListener("input", function (event) {
+
+        const field = event.target;
+
+        if (typeof field.checkValidity !== "function") {
+            return;
+        }
+
+        if (field.checkValidity()) {
+            field.removeAttribute("aria-invalid");
+
+            const errorMessage =
+                field.parentElement.querySelector(".field-error");
+
+            if (errorMessage) {
+                errorMessage.remove();
+            }
+        }
+
+    });
+
     // Prevent a page reload and process the form.
     quoteForm.addEventListener("submit", function (event) {
 
