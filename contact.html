@@ -72,7 +72,7 @@
                 production requirements.
             </p>
 
-            <form>
+            <form id="quote-form" action="#">
                 
                 <p>
                     <label for="full-name">Full Name:</label><br>
@@ -191,18 +191,44 @@
                 </p>
 
                 <p>
-                    <button type="submit">Submit Quote Request</button>
+                    <button type="submit">Review Quote Request</button>
                 </p>
 
             </form>
-        </section>
-
-    </main>
+            
+            <div id="form-feedback" 
+                role="status" 
+                aria-live="polite"></div>
+            
+            <section id="quote-preview" 
+                    class="quote-preview" 
+                    hidden
+                    aria-labelledby="quote-preview-heading">
+            
+                <h3 id="quote-preview-heading">
+                    Quote Request Preview
+                </h3>
+                
+                <div id="preview-details"></div>
+                
+                <p>
+                    This is a preview only. Your request has not 
+                    been sent to Numba Media.
+                </p>
+                
+                <button type="button" id="edit-request">
+                    Edit Request
+                </button>
+            
+            </section>
+        
+        </main>
 
     <footer>
         <p>&copy; 2026 Numba Media. All rights reserved.</p>
     </footer>
-
+    
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>
