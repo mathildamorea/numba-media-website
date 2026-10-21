@@ -156,13 +156,54 @@
             </div>
 
         </section>
-
+        
+        <section class="estimator-section" aria-labelledby="estimator-heading">
+            <h2 id="estimator-heading">Service Quote Estimator</h2>
+            
+            <p>
+                Select a service and enter the number of hours
+                to calculate an estimated production cost.
+                Prices are illustrative only.
+            </p>
+            
+            <div class="estimator-panel">
+                
+                <label for="estimate-service">Select Service:</label>
+                <select id="estimate-service">
+                    <option value="">-- Select a Service --</option>
+                    <option value="video">Video Production</option>
+                    <option value="photo">Photography</option>
+                    <option value="drone">Drone Production</option>
+                    <option value="live">Live Production</option>
+                    <option value="editing">Post-Production</option>
+                </select>
+                
+                <label for="estimate-hours">Number of Hours:</label>
+                <input
+                    type="number"
+                    id="estimate-hours"
+                    min="1"
+                    max="24"
+                    step="1"
+                    value="1">
+                
+                <button type="button" id="calculate-estimate">
+                    Calculate Estimate
+                </button>
+                
+                <p id="estimate-result" role="status" aria-live="polite"></p>
+            
+            </div>
+        
+        </section>
+        
     </main>
     
 <footer>
     <p>&copy; 2026 Numba Media. All rights reserved.</p>
 </footer>
 
+<script src="js/script.js" defer></script>
 </body>
 
 </html>
